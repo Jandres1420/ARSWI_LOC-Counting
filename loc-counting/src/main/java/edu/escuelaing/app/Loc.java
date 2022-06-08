@@ -6,9 +6,20 @@ import java.util.Scanner;
 
 public class Loc {
     private String file;
+
+    /**
+     * Class
+     * @param file
+     */
     public Loc(String file){
         this.file = file;
     }
+
+    /**
+     *
+     * @return The number of line that are not documentated
+     * @throws FileNotFoundException
+     */
     public int read() throws FileNotFoundException {
         int cont = 0;
         File x = new File(file);
@@ -20,19 +31,18 @@ public class Loc {
                 cont++;
             }else{
                 while(!entradaTeclado.equals(" */")){
-
-                    System.out.println("no entiendo");
-                    System.out.println(entradaTeclado);
                     entradaTeclado = sc.nextLine();
-
                 }
             }
-
-            ;
         }
         return cont;
     }
 
+    /**
+     * Method that verify one line read from the file, and identify if its documentation
+     * @param line
+     * @return boolean flag
+     */
     public boolean verifyDoc(String line){
         boolean flag = true;
         if(line.equals("/**") || line.equals("//")){

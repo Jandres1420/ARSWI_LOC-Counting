@@ -3,8 +3,8 @@ package edu.escuelaing.app;
 import java.util.Scanner;
 
 /**
- * Hello world!
- *
+ * Class that starts the app
+ * @author Andrés Pico
  */
 public class App 
 {
@@ -14,6 +14,6 @@ public class App
         String entradaTeclado = "";
         Scanner entradaEscaner = new Scanner (System.in);
         entradaTeclado = entradaEscaner.nextLine ();
-        Organizar busqueda= new Organizar(entradaTeclado);
+        Organize organize= new Organize(entradaTeclado);
     }
 }
